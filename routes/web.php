@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main', ['title' => 'Dapatkan Rekomendasi']);
+});
+Route::get('/detail', function () {
+    return view('detail', ['title' => 'Detail Menu']);
+});
+Route::get('/result', function () {
+    return view('result', ['title' => 'Hasil Rekomendasi']);
 });
