@@ -33,9 +33,9 @@
         <li>
             <a href="{{ route('riwayat.index') }}">
                 <div class="parent-icon">
-                    <i class="bi bi-house-door"></i>
+                    <i class="lni lni-book"></i>
                 </div>
-                <div class="menu-title">Riwayat Penghitungan</div>
+                <div class="menu-title">Counting History</div>
             </a>
         </li>
 
@@ -45,7 +45,7 @@
                 <div class="parent-icon">
                     <i class="lni lni-files"></i>
                 </div>
-                <div class="menu-title">Data Menu Makanan</div>
+                <div class="menu-title">Food Menu Data</div>
             </a>
             <ul>
                 {{-- <li> <a href="{{ route('dataMenu') }}">

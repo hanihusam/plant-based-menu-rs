@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Dasboard')
-@section('subtitle', 'Dasboard')
+@section('title', 'Dashboard')
+@section('subtitle', 'Input Data')
 
 @section('contents')
 
@@ -13,54 +13,54 @@
         <div class="card">
             <div class="card-body">
                 <div class="border p-3 rounded">
-                    <h6 class="mb-0 text-uppercase">Masukkan Data</h6>
+                    <h6 class="mb-0 text-uppercase">Input Data</h6>
                     <hr>
 
 
                     <form class="row g-3" action="{{ route('dashboard.penghitungan') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="col-12">
-                            <label class="form-label">Berat Badan</label>
+                            <label class="form-label">Weight</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" name="berat_badan">
                                 <span class="input-group-text">Kg</span>
                             </div>
                         </div>
                         <div class="col-12">
-                            <label class="form-label">Tinggi Badan</label>
+                            <label class="form-label">Height</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" name="tinggi_badan">
                                 <span class="input-group-text">Cm</span>
                             </div>
                         </div>
                         <div class="col-12">
-                            <label class="form-label">Umur</label>
+                            <label class="form-label">Age</label>
                             <div class="input-group">
                                 <input type="text" class="form-control" name="umur">
-                                <span class="input-group-text">Tahun</span>
+                                <span class="input-group-text">Years</span>
                             </div>
                         </div>
                         <div class="col-12">
-                            <label class="form-label">Jenis Kelamin</label>
+                            <label class="form-label">Gender</label>
                             <select class="form-select" aria-label="Default select example" name="jenis_kelamin">
-                                <option selected="">Pilih Jenis Kelamin</option>
-                                <option value="Perempuan">Perempuan</option>
-                                <option value="Laki-laki">Laki-laki</option>
+                                <option selected="">Select Gender</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
                             </select>
                         </div>
                         <div class="col-12">
-                            <label class="form-label">Aktivitas Fisik</label>
+                            <label class="form-label">Physical Activity</label>
                             <select class="form-select" aria-label="Default select example" name="aktivitas_fisik">
-                                <option selected="">Pilih Aktivitas Fisik</option>
-                                <option value="Sangat Ringan">Sangat Ringan</option>
-                                <option value="Ringan">Ringan</option>
-                                <option value="Sedang">Sedang</option>
-                                <option value="Berat">Berat</option>
+                                <option selected="">Select Physical Activity</option>
+                                <option value="Very Light">Very Light</option>
+                                <option value="Light">Light</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Weight">Weight</option>
                             </select>
                         </div>
                         <div class="col-12">
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary">Hitung</button>
+                                <button type="submit" class="btn btn-primary">Calculate</button>
                             </div>
                         </div>
                     </form>

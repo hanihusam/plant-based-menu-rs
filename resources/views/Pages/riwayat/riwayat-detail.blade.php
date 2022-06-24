@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Riwayat Penghitungan')
-@section('subtitle', 'Detail Riwayat')
+@section('title', 'Counting History')
+@section('subtitle', 'History Details')
 
 @section('contents')
 <div class="row">
@@ -9,38 +9,38 @@
     <div class="col-12 col-lg-12 col-xl-6 d-flex">
         <div class="card radius-10 w-100">
             <div class="card-header">
-                <h5 class="mb-0">Data Pribadi</h5>
+                <h5 class="mb-0">Personal Data</h5>
             </div>
             <div class="card-body">
                 <table class="table mb-0">
                     <tbody>
                         <tr>
-                            <th scope="row">Berat Badan Saat Ini</th>
+                            <th scope="row">Current Weight</th>
                             <td>:</td>
                             <td>{{ $dataInput["berat_badan"] }} Kg</td>
                         </tr>
                         <tr>
-                            <th scope="row">Tinggi Badan</th>
+                            <th scope="row">Height</th>
                             <td>:</td>
                             <td>{{ $dataInput["tinggi_badan"] }} Cm</td>
                         </tr>
                         <tr>
-                            <th scope="row">Umur</th>
+                            <th scope="row">Age</th>
                             <td>:</td>
                             <td>{{ $dataInput["umur"] }}</td>
                         </tr>
                         <tr>
-                            <th scope="row">Jenis Kelamin</th>
+                            <th scope="row">Gender</th>
                             <td>:</td>
                             <td>{{ $dataInput["jenis_kelamin"] }}</td>
                         </tr>
                         <tr>
-                            <th scope="row">Aktivitas Fisik</th>
+                            <th scope="row">Physical Activity</th>
                             <td>:</td>
                             <td>{{ $dataInput["aktivitas_fisik"] }}</td>
                         </tr>
                         <tr>
-                            <th scope="row">Berat Badan Ideal</th>
+                            <th scope="row">Ideal Weight</th>
                             <td>:</td>
                             <td><strong>{{ $BBIdeal }} Kg</strong></td>
                         </tr>
@@ -50,16 +50,16 @@
 
 
             <div class="card-header">
-                <h5 class="mb-0">Kebutuhan Energi Perhari</h5>
+                <h5 class="mb-0">Daily Energy Needs</h5>
             </div>
             <div class="card-body">
                 <table class="table table-bordered mb-0">
                     <thead>
                         <tr>
-                            <th scope="col">Kalori</th>
-                            <th scope="col">Karbohidrat</th>
+                            <th scope="col">Calories</th>
+                            <th scope="col">Carbohydrate</th>
                             <th scope="col">Protein</th>
-                            <th scope="col">Lemak</th>
+                            <th scope="col">Fat</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -69,41 +69,22 @@
                             <td>{{ number_format($DecisionMatrix['protein']['AKG'],2,",",".") }}</td>
                             <td>{{ number_format($DecisionMatrix['lemak']['AKG'],2,",",".") }}</td>
                         </tr>
-                        {{-- <tr>
-                            <th scope="row">Makan Pagi</th>
-                            <td>{{ $EnergiPerWaktuMakan['Normal']['Makan Pagi'] }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Snack 1</th>
-                            <td>{{ $EnergiPerWaktuMakan['Normal']['Snack 1'] }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Makan Siang</th>
-                            <td>{{ $EnergiPerWaktuMakan['Normal']['Makan Siang'] }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Snack 2</th>
-                            <td>{{ $EnergiPerWaktuMakan['Normal']['Snack 2'] }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Makan Malam</th>
-                            <td>{{ $EnergiPerWaktuMakan['Normal']['Makan Malam'] }}</td>
-                        </tr> --}}
+
                     </tbody>
                 </table>
             </div>
 
             <div class="card-header">
-                <h5 class="mb-0">Kebutuhan Energi Perhari : Maksimal</h5>
+                <h5 class="mb-0">Daily Energy Needs : Maximum</h5>
             </div>
             <div class="card-body">
                 <table class="table table-bordered mb-0">
                     <thead>
                         <tr>
-                            <th scope="col">Kalori</th>
-                            <th scope="col">Karbohidrat</th>
+                            <th scope="col">Calories</th>
+                            <th scope="col">Carbohydrate</th>
                             <th scope="col">Protein</th>
-                            <th scope="col">Lemak</th>
+                            <th scope="col">Fat</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -119,16 +100,16 @@
 
 
             <div class="card-header">
-                <h5 class="mb-0">Kebutuhan Energi Perhari : Minimal</h5>
+                <h5 class="mb-0">Daily Energy Needs : Minimum</h5>
             </div>
             <div class="card-body">
                 <table class="table table-bordered mb-0">
                     <thead>
                         <tr>
-                            <th scope="col">Kalori</th>
-                            <th scope="col">Karbohidrat</th>
+                            <th scope="col">Calories</th>
+                            <th scope="col">Carbohydrate</th>
                             <th scope="col">Protein</th>
-                            <th scope="col">Lemak</th>
+                            <th scope="col">Fat</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -156,17 +137,17 @@
         <div class="card radius-10 w-100">
 
             <div class="card-header">
-                <h5 class="mb-0">Rekomendasi Menu Makan</h5>
+                <h5 class="mb-0">Food Menu Recommendations</h5>
             </div>
             <div class="card-body">
 
                 <table class="table table-bordered mb-4">
                     <thead>
                         <tr>
-                            <th scope="col">Kalori</th>
-                            <th scope="col">Karbohidrat</th>
+                            <th scope="col">Calories</th>
+                            <th scope="col">Carbohydrate</th>
                             <th scope="col">Protein</th>
-                            <th scope="col">Lemak</th>
+                            <th scope="col">Fat</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -189,7 +170,7 @@
                                 data-bs-target="#collapse{{ $i }}" aria-expanded="false"
                                 aria-controls="collapse{{ $i }}">
                                 <span>
-                                    <strong>{{ $key }} : </strong>
+                                    <strong>{{ $WaktuMakan[$key] }} : </strong>
                                     {{ $value["nama_menu"] }}
                                     <span>
                             </button>
@@ -200,11 +181,11 @@
                                 <table class="table table-bordered mb-0">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Kalori</th>
-                                            <th scope="col">Karbohidrat</th>
+                                            <th scope="col">Calories</th>
+                                            <th scope="col">Carbohydrate</th>
                                             <th scope="col">Protein</th>
-                                            <th scope="col">Lemak</th>
-                                            <th scope="col">Sajian</th>
+                                            <th scope="col">Fat</th>
+                                            <th scope="col">Serving</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -219,9 +200,9 @@
                                 </table>
                                 <br>
 
-                                <strong>Bahan</strong><br>
+                                <strong>Ingredients</strong><br>
                                 <p>{{ $value["komposisi"] }}</p>
-                                <strong>Cara Masak</strong><br>
+                                <strong>How to Cook</strong><br>
                                 <p>{{ $value["cara_masak"] }}</p>
                             </div>
                         </div>

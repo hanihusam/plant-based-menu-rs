@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Dasboard')
-@section('subtitle', 'Hasil Penghitungan')
+@section('title', 'Dashboard')
+@section('subtitle', 'Calculation Results')
 
 @section('contents')
 <div class="row">
@@ -9,38 +9,38 @@
     <div class="col-12 col-lg-12 col-xl-6 d-flex">
         <div class="card radius-10 w-100">
             <div class="card-header">
-                <h5 class="mb-0">Data Pribadi</h5>
+                <h5 class="mb-0">Personal Data</h5>
             </div>
             <div class="card-body">
                 <table class="table mb-0">
                     <tbody>
                         <tr>
-                            <th scope="row">Berat Badan Saat Ini</th>
+                            <th scope="row">Current Weight</th>
                             <td>:</td>
                             <td>{{ $dataInput["berat_badan"] }} Kg</td>
                         </tr>
                         <tr>
-                            <th scope="row">Tinggi Badan</th>
+                            <th scope="row">Height</th>
                             <td>:</td>
                             <td>{{ $dataInput["tinggi_badan"] }} Cm</td>
                         </tr>
                         <tr>
-                            <th scope="row">Umur</th>
+                            <th scope="row">Age</th>
                             <td>:</td>
                             <td>{{ $dataInput["umur"] }}</td>
                         </tr>
                         <tr>
-                            <th scope="row">Jenis Kelamin</th>
+                            <th scope="row">Gender</th>
                             <td>:</td>
                             <td>{{ $dataInput["jenis_kelamin"] }}</td>
                         </tr>
                         <tr>
-                            <th scope="row">Aktivitas Fisik</th>
+                            <th scope="row">Physical Activity</th>
                             <td>:</td>
                             <td>{{ $dataInput["aktivitas_fisik"] }}</td>
                         </tr>
                         <tr>
-                            <th scope="row">Berat Badan Ideal</th>
+                            <th scope="row">Ideal Weight</th>
                             <td>:</td>
                             <td><strong>{{ $BBIdeal }} Kg</strong></td>
                         </tr>
@@ -56,11 +56,11 @@
         <div class="card radius-10 w-100">
 
             <div class="card-header">
-                <h5 class="mb-0">Rekomendasi Menu Makan</h5>
+                <h5 class="mb-0">Food Menu Recommendations</h5>
             </div>
             <div class="card-body">
                 <div class="text-center mt-4">
-                    <h5 class="card-title">Maaf Sistem Tidak Menemukan Rekomendasi Menu yang Tepat Untuk Anda.</h5>
+                    <h5 class="card-title">Sorry The System Could Not Find The Right Menu Recommendation For You.</h5>
                 </div>
 
             </div>

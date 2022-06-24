@@ -37,7 +37,7 @@ class MenuMakananController extends Controller
         // import data
         Excel::import(new MenuMakananImport, $file);
 
-        session()->flash('message', 'Data Berhasil diimport');
+        session()->flash('message', 'Data Imported Successfully');
 
         return redirect()->route('dataMenu');
     }

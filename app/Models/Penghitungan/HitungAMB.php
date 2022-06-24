@@ -24,10 +24,10 @@ class HitungAMB
 
     public function nilai()
     {
-        if ($this->JenisKelamin == "Perempuan") {
+        if ($this->JenisKelamin == "Female") {
             $this->Hitung_Perempuan();
             return $this->AMB_Perempuan;
-        } elseif (($this->JenisKelamin == "Laki-laki")) {
+        } elseif (($this->JenisKelamin == "Male")) {
             $this->Hitung_Lakilaki();
             return $this->AMB_Lakilaki;
         }

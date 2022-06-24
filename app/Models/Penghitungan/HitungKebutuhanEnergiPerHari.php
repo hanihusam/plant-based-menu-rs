@@ -14,16 +14,16 @@ class HitungKebutuhanEnergiPerHari
     public function Hitung_Lakilaki()
     {
         switch ($this->Aktivitas_Fisik) {
-            case "Sangat Ringan":
+            case "Very Light":
                 $this->KebutuhanEnergi = 1.30;
                 break;
-            case "Ringan":
+            case "Light":
                 $this->KebutuhanEnergi = 1.65;
                 break;
-            case "Sedang":
+            case "Medium":
                 $this->KebutuhanEnergi = 1.76;
                 break;
-            case "Berat":
+            case "Heavy":
                 $this->KebutuhanEnergi = 2.10;
                 break;
         }
@@ -32,16 +32,16 @@ class HitungKebutuhanEnergiPerHari
     public function Hitung_Perempuan()
     {
         switch ($this->Aktivitas_Fisik) {
-            case "Sangat Ringan":
+            case "Very Light":
                 $this->KebutuhanEnergi = 1.30;
                 break;
-            case "Ringan":
+            case "Light":
                 $this->KebutuhanEnergi = 1.55;
                 break;
-            case "Sedang":
+            case "Medium":
                 $this->KebutuhanEnergi = 1.70;
                 break;
-            case "Bera":
+            case "Heavy":
                 $this->KebutuhanEnergi = 2.00;
                 break;
         }
@@ -49,9 +49,9 @@ class HitungKebutuhanEnergiPerHari
 
     public function nilai()
     {
-        if ($this->JenisKelamin == "Perempuan") {
+        if ($this->JenisKelamin == "Female") {
             $this->Hitung_Perempuan();
-        } elseif (($this->JenisKelamin == "Laki-laki")) {
+        } elseif (($this->JenisKelamin == "Male")) {
             $this->Hitung_Lakilaki();
         }
 

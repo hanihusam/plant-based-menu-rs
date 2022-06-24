@@ -1,7 +1,7 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Data Menu Makanan')
-@section('subtitle', 'Input Data')
+@section('title', 'Food Menu Data')
+@section('subtitle', 'Import Data')
 
 @section('contents')
 
@@ -28,7 +28,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="border p-3 rounded">
-                    <h6 class="mb-0 text-uppercase">Input Data Menu Makanan</h6>
+                    <h6 class="mb-0 text-uppercase">Food Menu Data Import</h6>
                     <hr>
 
                     <form class="row g-3"  method="post" action="{{ route('import_excel') }}" enctype="multipart/form-data">
@@ -36,7 +36,7 @@
 
 
                         <div class="col-12">
-                            <label for="formFile" class="form-label">Input Data Master Menu Makanan (Excel)</label>
+                            <label for="formFile" class="form-label">Food Menu Master Data Import (Excel)</label>
                             <input class="form-control" type="file" id="formFile" name="file">
                             @error('file')
                                 <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -44,7 +44,7 @@
                         </div>
                         <div class="col-12">
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                <button type="submit" class="btn btn-primary">Import</button>
                             </div>
                         </div>
                     </form>
@@ -60,12 +60,12 @@
 <div class="card">
     <div class="card-body">
         <div class="d-flex align-items-center">
-            <h5 class="mb-0">Daftar Menu</h5>
+            <h5 class="mb-0">Menu list</h5>
             <form class="ms-auto position-relative">
                 <div class="position-absolute top-50 translate-middle-y search-icon px-3">
                     <ion-icon name="search-sharp" role="img" class="md hydrated" aria-label="search sharp"></ion-icon>
                 </div>
-                <input class="form-control ps-5" type="text" placeholder="search">
+                {{-- <input class="form-control ps-5" type="text" placeholder="search"> --}}
             </form>
         </div>
         <div class="table-responsive mt-3">
@@ -73,12 +73,12 @@
                 <thead class="table-secondary">
                     <tr>
                         <th>No.</th>
-                        <th>Nama Menu</th>
-                        <th>Kalori</th>
-                        <th>Karbohidrat</th>
-                        <th>Protein</th>
-                        <th>Lemak</th>
-                        <th>Sajian</th>
+                        <th>Menu Name</th>
+                        <th>Calories</th>
+                        <th>Carbohydrates</th>
+                        <th>Proteins</th>
+                        <th>Fat</th>
+                        <th>Serving</th>
                         {{-- <th>Aksi</th> --}}
                     </tr>
                 </thead>

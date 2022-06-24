@@ -7,6 +7,7 @@ use App\Models\Penghitungan\HitungDecisionMatrix;
 use App\Models\Penghitungan\HitungKebutuhanEnergiPerWaktuMakan;
 use App\Models\Penghitungan\HitungTotalGiziRekomendasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class RiwayatController extends Controller
@@ -23,6 +24,8 @@ class RiwayatController extends Controller
 
         $DataDiri = DB::table('data_diris')
             ->join('rekomendasis', 'data_diris.id', '=', 'rekomendasis.dataDiri_id')
+            ->join('users', 'users.id', '=', 'data_diris.user_id')
+            ->where('users.id', Auth::user()->id)
             ->select('data_diris.*', 'rekomendasis.kebutuhan_energi', 'rekomendasis.kombinasiMenu_id')
             ->get();
         // return $DataDiri;
@@ -99,6 +102,13 @@ class RiwayatController extends Controller
         $DecisionMatrixMinimal = $Proses_Hitung_DecisionMatrix->nilai();
         // return $DecisionMatrixMinimal;
 
+        $WaktuMakan = [
+            "Makan Pagi" => "Breakfast",
+            "Snack 1" => "Snack 1",
+            "Makan Siang" => "Lunch",
+            "Snack 2" => "Snack 2",
+            "Makan Malam" => "Dinner",
+        ];
         // return  $HasilRekomendasi;
 
         return view('Pages.riwayat.riwayat-detail', [
@@ -116,6 +126,8 @@ class RiwayatController extends Controller
 
             'EnergiPerhariMinimal' => $EnergiPerhariMinimal,
             'DecisionMatrixMinimal' => $DecisionMatrixMinimal,
+            'WaktuMakan' => $WaktuMakan,
+
         ]);
     }
 }

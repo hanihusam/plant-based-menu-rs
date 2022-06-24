@@ -8,21 +8,21 @@
 <div class="card">
     <div class="card-body">
         <div class="d-flex align-items-center">
-            <h5 class="mb-0">Data Penghitungan</h5>
+            <h5 class="mb-0">Calculation Data</h5>
         </div>
         <div class="table-responsive mt-3">
             <table class="table align-middle">
                 <thead class="table-secondary">
                     <tr>
                         <th>No</th>
-                        <th>Waktu Penghitungan</th>
-                        <th>Berat Badan</th>
-                        <th>Tinggi Badan</th>
-                        <th>Umur</th>
-                        <th>Jenis Kelamin</th>
-                        <th>Aktivitas</th>
-                        <th>Kebutuhan Energi</th>
-                        <th>Aksi</th>
+                        <th>Calculation Time</th>
+                        <th>Weight</th>
+                        <th>Height</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Activities</th>
+                        <th>Energy Demand</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,7 +39,7 @@
                         <td>{{ $Data->kebutuhan_energi }}</td>
 
                         <td>
-                            <a href="{{ route('riwayat.detail', $Data->kombinasiMenu_id) }}" class="text-primary">Lihat Detail</i></a>
+                            <a href="{{ route('riwayat.detail', $Data->kombinasiMenu_id) }}" class="text-primary">View Details</i></a>
                         </td>
                     </tr>
                     <?php $i++ ?>

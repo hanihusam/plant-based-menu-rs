@@ -192,6 +192,16 @@ class DashboardController extends Controller
         //Penyimpanan Data
         // return $UrutanAlternatif;
 
+        $WaktuMakan = [
+            "Makan Pagi" => "Breakfast",
+            "Snack 1" => "Snack 1",
+            "Makan Siang" => "Lunch",
+            "Snack 2" => "Snack 2",
+            "Makan Malam" => "Dinner",
+        ];
+        // $WaktuMakan = array_keys($EnergiPerWaktuMakan["Normal"]);
+
+        // return dd($WaktuMakan);
 
         $this->Penyimpanan($dataInput, $EnergiPerhari, $HasilRekomendasi);
 
@@ -221,6 +231,7 @@ class DashboardController extends Controller
             'JarakSolusiIdealPositifNegatif' => $JarakSolusiIdealPositifNegatif,
             'KedekatanRelatifSolusiIdeal' => $KedekatanRelatifSolusiIdeal,
             'UrutanAlternatif' => $UrutanAlternatif,
+            'WaktuMakan' => $WaktuMakan,
 
 
         ]);
