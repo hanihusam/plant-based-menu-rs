@@ -108,7 +108,13 @@ class DashboardController extends Controller
         $DaftarMenuMakanan = $Proses_Buat_Menu->nilai();
         // return $DaftarMenuMakanan;
 
-        if ($DaftarMenuMakanan[0]["Makan Pagi"] == "kosong") {
+        if (
+            $DaftarMenuMakanan[0]["Makan Pagi"] == "kosong" ||
+            $DaftarMenuMakanan[0]["Snack 1"] == "kosong" ||
+            $DaftarMenuMakanan[0]["Makan Siang"] == "kosong" ||
+            $DaftarMenuMakanan[0]["Snack 2"] == "kosong" ||
+            $DaftarMenuMakanan[0]["Makan Malam"] == "kosong"
+        ) {
             return view('Pages.dashboard.dashboard-hasil-kosong', [
                 'dataInput' => $dataInput,
                 'EnergiPerWaktuMakan' => $EnergiPerWaktuMakan,
@@ -116,7 +122,6 @@ class DashboardController extends Controller
                 'BBIdeal' => $BBIdeal,
             ]);
         }
-
 
         //Konversi Kombinasi Menu Kedalam Nilai Karbohidrat-Protein-Lemak
         $variable = ["karbohidrat", "protein", "lemak"];

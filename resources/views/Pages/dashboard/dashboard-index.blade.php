@@ -55,7 +55,7 @@
                                 <option value="Very Light">Very Light</option>
                                 <option value="Light">Light</option>
                                 <option value="Medium">Medium</option>
-                                <option value="Weight">Weight</option>
+                                <option value="Heavy">Heavy</option>
                             </select>
                         </div>
                         <div class="col-12">
