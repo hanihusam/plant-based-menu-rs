@@ -513,9 +513,9 @@
                                 <tr>
                                     <td>{{ $Sol }}</td>
                                     <td>
-                                        {{  number_format($DecisionMatrixTernormalisasi[$Sol][0],4,",",".")  }}
+                                        {{  number_format($BeratDecisionMatrixTernormalisasi[$Sol][0],4,",",".")  }}
                                         @for ($j = 1; $j < $JumlahData; $j++)
-                                            - {{  number_format($DecisionMatrixTernormalisasi[$Sol][$j],4,",",".")  }}
+                                            - {{  number_format($BeratDecisionMatrixTernormalisasi[$Sol][$j],4,",",".")  }}
                                         @endfor
                                     </td>
                                 <td>{{ number_format($Solla["Plus"],4,",",".") }}</td>

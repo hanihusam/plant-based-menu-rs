@@ -207,6 +207,7 @@ class DashboardController extends Controller
         // $WaktuMakan = array_keys($EnergiPerWaktuMakan["Normal"]);
 
         // return dd($WaktuMakan);
+        // return $JarakSolusiIdealPositifNegatif;
 
         $this->Penyimpanan($dataInput, $EnergiPerhari, $HasilRekomendasi);
 
